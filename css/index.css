@@ -153,10 +153,18 @@ h5 {
 /* Your code starts here! */
 body {
   margin: 0 auto;
-  width: 900px;
-  height: 1500px;
+  width: 100%;
 }
-
+.contanier {
+  width: 100%;
+  box-sizing: border-box;
+}
+.heading {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 .body2 {
   margin: 0 auto;
   width: 900px;
@@ -173,20 +181,20 @@ a {
 
 .top-nav1 {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   width: 80%;
   text-align: center;
   min-height: 200px;
   align-items: center;
   padding: 40px 40px, 40px, 0;
   word-spacing: 50px;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .top-nav2 {
   display: flex;
   justify-content: flex-start;
-  width: 80%;
+  width: 60%;
   text-align: center;
   min-height: 200px;
   align-items: center;
@@ -195,7 +203,7 @@ a {
 }
 
 .logo {
-  padding-left: 1%;
+  /* padding-left: 1%; */
 }
 
 header {
@@ -214,11 +222,12 @@ h1 {
 }
 
 .headerwithbutton {
-  width: 420px;
+  width: 90%;
+  margin-bottom: 10%;
 }
 
 .right {
-  width: 420px;
+  width: 90%;
   margin-left: 6%;
   vertical-align: top;
 }
@@ -238,8 +247,8 @@ hr {
   color: black;
   background-color: black;
   height: 2px;
-  width: 100%;
-  margin: 60px 0 0 0;
+  width: 95%;
+  margin: 60px 0 1px0 0;
 }
 
 h2 {
@@ -249,16 +258,19 @@ h2 {
 }
 
 .middle-img {
-  margin: 4% auto;
+  margin: 4% 5%;
+  width: 80%;
 }
 
 .parent1,
 .parent2 {
   display: flex;
+  margin: 4%;
+  width: 95%;
 }
 
 .child1 {
-  width: 45%;
+  width: 48%;
 }
 .child2 {
   width: 48%;
@@ -322,8 +334,8 @@ footer {
   color: black;
   background-color: black;
   height: 1px;
-  width: 100%;
-  margin: 40px 0 0 0;
+  width: 95%;
+  margin: 4%;
 }
 
 address {
@@ -362,6 +374,10 @@ ul li {
   border: 1px solid #000;
 }
 
+.contact {
+  margin: 4%;
+}
+
 .copy-1 {
   display: flex;
   justify-content: center;
@@ -372,4 +388,85 @@ ul li {
   display: flex;
   justify-content: center;
   padding-top: 12%;
+}
+
+/* Media queries here  */
+@media (max-width: 800px) {
+  .heading {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 95%;
+  }
+  .logo {
+    margin-top: 5%;
+    margin-left: 12%;
+  }
+  nav {
+    width: 90%;
+  }
+  header {
+    justify-content: center;
+    align-items: center;
+    margin: 0 28% 10%;
+    width: 80%;
+  }
+  hr {
+    width: 95%;
+    margin-left: 5%;
+  }
+  .hr2 {
+    width: 95%;
+    margin-left: 5%;
+  }
+
+  .child {
+    margin-left: 1%;
+  }
+  .contact {
+    margin-left: 5%;
+  }
+  .middle-img {
+    width: 95%;
+    margin-left: 4%;
+  }
+}
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    line-height: 2;
+  }
+  hr {
+    width: 95%;
+    margin-left: 5%;
+  }
+  .hr2 {
+    width: 95%;
+    margin-left: 5%;
+  }
+
+  .headerwithbutton h1 {
+    width: 90%;
+    font-size: 40px;
+    margin-right: 15%;
+  }
+
+  .headerImg {
+    display: none;
+  }
+  .parent1,
+  .parent2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .child {
+    width: 100%;
+    margin-left: 2%;
+  }
+  .contact {
+    margin-left: 5%;
+  }
+  .middle-img {
+    width: 95%;
+    margin-left: 4%;
+  }
 }
